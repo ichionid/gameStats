@@ -15,8 +15,17 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <GameDetails gameDetails={this.props.gameDetails}/>
-        <Players players={this.props.players}/>
+        <GameDetails
+          gameDetails={this.props.gameDetails}
+          gameIncreaseScore={this.props.gameIncreaseScore}
+          gameDecreaseScore={this.props.gameDecreaseScore}
+          gameChangeName={this.props.gameChangeName}
+        />
+        <Players
+          players={this.props.players}
+          gameIncreaseStat={this.props.gameIncreaseStat}
+          gameDecreaseStat={this.props.gameDecreaseStat}
+        />
       </div>
     );
   }
